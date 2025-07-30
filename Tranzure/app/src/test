@@ -1,0 +1,6 @@
+   com.example.myapp
+   ├── model
+   ├── view
+   ├── controller
+   ├── network
+   └── utils
