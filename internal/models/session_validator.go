@@ -2,7 +2,6 @@ package models
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/kento/tranzure/internal/models/validation"
 )
