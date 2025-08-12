@@ -30,6 +30,17 @@ test-models:
 		go test -v ./internal/models/tests/...; \
 	fi
 
+# Test database functionality
+test-database:
+	@if command -v bash > /dev/null 2>&1; then \
+		bash scripts/test_database.sh; \
+	else \
+		echo "Database testing requires bash and Docker"; \
+	fi
+
+# Run all tests including database
+test-all: test-models test-database
+
 # Start Docker containers
 docker-up:
 	docker-compose up -d
@@ -41,10 +52,12 @@ docker-down:
 # Show help
 help:
 	@echo "Available targets:"
-	@echo "  build       - Build the application"
-	@echo "  run         - Build and run the application"
-	@echo "  test        - Run all tests"
-	@echo "  test-models - Run model tests"
-	@echo "  clean       - Clean build artifacts"
-	@echo "  docker-up   - Start Docker containers"
-	@echo "  docker-down - Stop Docker containers"
+	@echo "  build         - Build the application"
+	@echo "  run           - Build and run the application"
+	@echo "  test          - Run all tests"
+	@echo "  test-models   - Run model tests"
+	@echo "  test-database - Run database tests"
+	@echo "  test-all      - Run all tests including database"
+	@echo "  clean         - Clean build artifacts"
+	@echo "  docker-up     - Start Docker containers"
+	@echo "  docker-down   - Stop Docker containers"
