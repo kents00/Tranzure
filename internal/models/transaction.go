@@ -2,13 +2,16 @@ package models
 
 import (
 	"time"
+
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 	"gorm.io/datatypes"
 )
 
-type TransactionType string
-type TransactionStatus string
+type (
+	TransactionType   string
+	TransactionStatus string
+)
 
 const (
 	TransactionTypeFiat   TransactionType = "fiat"

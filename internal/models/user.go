@@ -2,11 +2,14 @@ package models
 
 import (
 	"time"
+
 	"github.com/google/uuid"
 )
 
-type UserRole string
-type UserStatus string
+type (
+	UserRole   string
+	UserStatus string
+)
 
 const (
 	UserRoleUser  UserRole = "user"
