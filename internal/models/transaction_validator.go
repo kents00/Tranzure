@@ -46,8 +46,8 @@ func (t *Transaction) Validate() error {
 
 	// Validate transaction status
 	if t.Status != TransactionStatusPending &&
-	   t.Status != TransactionStatusSuccess &&
-	   t.Status != TransactionStatusFailed {
+		t.Status != TransactionStatusSuccess &&
+		t.Status != TransactionStatusFailed {
 		return fmt.Errorf("status: %w", validation.ErrInvalidValue)
 	}
 

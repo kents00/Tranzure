@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/shopspring/decimal"
 	"github.com/kento/tranzure/internal/models/validation"
+	"github.com/shopspring/decimal"
 )
 
 func TestIsValidEmail(t *testing.T) {

@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/shopspring/decimal"
-	"gorm.io/datatypes"
 	"github.com/kento/tranzure/internal/models"
 	"github.com/kento/tranzure/internal/models/validation"
+	"github.com/shopspring/decimal"
+	"gorm.io/datatypes"
 )
 
 func TestTransactionValidation(t *testing.T) {
@@ -35,9 +35,9 @@ func TestTransactionValidation(t *testing.T) {
 
 	// Define test cases with invalid data
 	testCases := []struct {
-		name                string
-		modifyTransaction   func(*models.Transaction)
-		expectedError       error
+		name              string
+		modifyTransaction func(*models.Transaction)
+		expectedError     error
 	}{
 		{
 			name: "Empty TxID",

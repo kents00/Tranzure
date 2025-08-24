@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/shopspring/decimal"
 	"github.com/kento/tranzure/internal/models"
 	"github.com/kento/tranzure/internal/models/validation"
+	"github.com/shopspring/decimal"
 )
 
 func TestWalletValidation(t *testing.T) {
@@ -28,9 +28,9 @@ func TestWalletValidation(t *testing.T) {
 
 	// Define test cases with invalid data
 	testCases := []struct {
-		name           string
-		modifyWallet   func(*models.Wallet)
-		expectedError  error
+		name          string
+		modifyWallet  func(*models.Wallet)
+		expectedError error
 	}{
 		{
 			name: "Empty WalletID",

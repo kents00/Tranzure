@@ -27,9 +27,9 @@ func TestSessionValidation(t *testing.T) {
 
 	// Define test cases with invalid data
 	testCases := []struct {
-		name           string
-		modifySession  func(*models.Session)
-		expectedError  error
+		name          string
+		modifySession func(*models.Session)
+		expectedError error
 	}{
 		{
 			name: "Empty SessionID",

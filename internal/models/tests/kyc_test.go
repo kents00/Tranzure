@@ -28,8 +28,8 @@ func TestKYCValidation(t *testing.T) {
 
 	// Define test cases with invalid data
 	testCases := []struct {
-		name        string
-		modifyKYC   func(*models.KYCVerification)
+		name          string
+		modifyKYC     func(*models.KYCVerification)
 		expectedError error
 	}{
 		{

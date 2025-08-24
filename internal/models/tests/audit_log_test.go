@@ -27,9 +27,9 @@ func TestAuditLogValidation(t *testing.T) {
 
 	// Define test cases with invalid data
 	testCases := []struct {
-		name            string
-		modifyAuditLog  func(*models.AuditLog)
-		expectedError   error
+		name           string
+		modifyAuditLog func(*models.AuditLog)
+		expectedError  error
 	}{
 		{
 			name: "Empty LogID",

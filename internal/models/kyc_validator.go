@@ -24,8 +24,8 @@ func (k *KYCVerification) Validate() error {
 
 	// Validate KYC status
 	if k.Status != KYCStatusPending &&
-	   k.Status != KYCStatusApproved &&
-	   k.Status != KYCStatusRejected {
+		k.Status != KYCStatusApproved &&
+		k.Status != KYCStatusRejected {
 		return fmt.Errorf("status: %w", validation.ErrInvalidValue)
 	}
 
